@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/dcc79d62dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="main-bg-container">
+        <nav class="navbar-container">
+            <div class="navbar-top-section">
+                <span class="app-name">Sustainable Flow</span>
+                <nav class="navbar-elements">
+                    <a class="options" href="#">Home</a>
+                    <a class="options" href="#">About Us</a>
+                    <a class="options" href="#">Around the world</a>
+                    <a class="options" href="#">Contact Us</a>
+                    <!-- 
+                    <a class="options" href="#">Do It Yourself</a>
+                    <a class="options" href="#">Shop</a>
+                    -->
+                </nav>
+                <nav class="sm-icons">
+                    <i class="fas fa-bars" id="menuIcon"></i>
+                    <i class="fas fa-times hide" id="closeIcon"></i>
+                </nav>
+            </div>
+            <div class="menu-container hide" id="menuContainer">
+                <a class="menu-content top-border" href="#">Home</a>
+                <a class="menu-content" href="#">About Us</a>
+                <a class="menu-content" href="#">Around the world</a>
+                <a class="menu-content" href="#">Contact Us</a>
+            </div>
+        </nav>
+        <div class="bottom-container">
+            <h1 class="welcome-text">Welcome to Sustainable Flow</h1>
+            <form id="loginForm" class="form-container">
+                <h1 class="login-heading">Login</h1>
+                <label class="label-text" for="loginUsername">Username:</label> <br />
+                <input class="user-input" type="text" id="loginUsername" /> <br />
+                <p class="error-msg" id="loginUsernameErrMsg"></p>
+                <label class="label-text" for="loginPassword">Password:</label> <br />
+                <input class="user-input" type="password" id="loginPassword" /> <br />
+                <p class="error-msg" id="loginPasswordErrMsg"></p>
+                <button class="custom-button" id="submitButton" type="submit">Submit</button> <br />
+                <p class="register-text">
+                    New user? register <a id="registerHere" href="#">here</a>
+                </p>
+            </form>
+            <form id="registerForm" class="form-container hide">
+                <h1 class="login-heading">Register</h1>
+                <label class="label-text" for="registerUsername">Username:</label> <br />
+                <input class="user-input" type="text" id="registerUsername" /> <br />
+                <p class="error-msg" id="newUsernameErrMsg"></p>
+                <label class="label-text" for="registerEmail">Email Address:</label> <br />
+                <input class="user-input" type="text" id="registerEmail" /> <br />
+                <p class="error-msg" id="newUserEmailErrMsg"></p>
+                <label class="label-text" for="registerPassword">Password:</label> <br />
+                <input class="user-input" type="password" id="registerPassword" /> <br />
+                <p class="error-msg" id="newPasswordErrMsg"></p>
+                <label class="label-text" for="confirmPassword">Confirm Password:</label> <br />
+                <input class="user-input" type="password" id="confirmPassword" /> <br />
+                <p class="error-msg" id="confirmPasswordErrMsg"></p>
+                <button class="custom-button" id="registerButton" type="submit">Register</button> <br />
+                <p class="register-text">
+                    Back to login? click <a id="loginHere" href="#">here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
