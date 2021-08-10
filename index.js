@@ -3,15 +3,15 @@ let closeIconEl = document.getElementById("closeIcon");
 let menuContainerEl = document.getElementById("menuContainer");
 
 let userData = {
-  username: "",
-  password: "",
+    username: "",
+    password: ""
 };
 
 let newUserData = {
-  newUsername: "",
-  newUserEmail: "",
-  newUserPassword: "",
-  newUserConfirmPassword: "",
+    newUsername: "",
+    newUserEmail: "",
+    newUserPassword: "",
+    newUserConfirmPassword: ""
 };
 
 let loginFormEl = document.getElementById("loginForm");
@@ -40,145 +40,151 @@ let newPasswordErrMsgEl = document.getElementById("newPasswordErrMsg");
 let confirmPasswordErrMsgEl = document.getElementById("confirmPasswordErrMsg");
 
 //menu icon function for small devices
-menuIconEl.addEventListener("click", function () {
-  menuIconEl.classList.toggle("hide");
-  closeIconEl.classList.toggle("hide");
-  menuContainerEl.classList.toggle("hide");
+menuIconEl.addEventListener("click", function() {
+    menuIconEl.classList.toggle("hide");
+    closeIconEl.classList.toggle("hide");
+    menuContainerEl.classList.toggle("hide");
 });
 //close icon function for small devices
-closeIconEl.addEventListener("click", function () {
-  menuIconEl.classList.toggle("hide");
-  closeIconEl.classList.toggle("hide");
-  menuContainerEl.classList.toggle("hide");
+closeIconEl.addEventListener("click", function() {
+    menuIconEl.classList.toggle("hide");
+    closeIconEl.classList.toggle("hide");
+    menuContainerEl.classList.toggle("hide");
 });
 
 //function to show register page
-registerHereEl.addEventListener("click", function () {
-  loginFormEl.classList.toggle("hide");
-  registerFormEl.classList.toggle("hide");
-  registerUsernameEl.value = "";
-  registerEmailEl.value = "";
-  registerPasswordEl.value = "";
-  confirmPasswordEl.value = "";
-  newUsernameErrMsgEl.textContent = "";
-  newUserEmailErrMsgEl.textContent = "";
-  newPasswordErrMsgEl.textContent = "";
-  confirmPasswordErrMsgEl.textContent = "";
+registerHereEl.addEventListener("click", function() {
+    loginFormEl.classList.toggle("hide");
+    registerFormEl.classList.toggle("hide");
+    registerUsernameEl.value = "";
+    registerEmailEl.value = "";
+    registerPasswordEl.value = "";
+    confirmPasswordEl.value = "";
+    newUsernameErrMsgEl.textContent = "";
+    newUserEmailErrMsgEl.textContent = "";
+    newPasswordErrMsgEl.textContent = "";
+    confirmPasswordErrMsgEl.textContent = "";
+
 });
 //function to show login page
-loginHereEl.addEventListener("click", function () {
-  loginFormEl.classList.toggle("hide");
-  registerFormEl.classList.toggle("hide");
-  loginUsernameEl.value = "";
-  loginPasswordEl.value = "";
-  loginUsernameErrMsgEl.textContent = "";
-  loginPasswordErrMsgEl.textContent = "";
+loginHereEl.addEventListener("click", function() {
+    loginFormEl.classList.toggle("hide");
+    registerFormEl.classList.toggle("hide");
+    loginUsernameEl.value = "";
+    loginPasswordEl.value = "";
+    loginUsernameErrMsgEl.textContent = "";
+    loginPasswordErrMsgEl.textContent = "";
 });
 
 //blur event for login username
-loginUsernameEl.addEventListener("blur", function (event) {
-  if (event.target.value === "") {
-    loginUsernameErrMsgEl.textContent = "Required*";
-  } else {
-    loginUsernameErrMsgEl.textContent = "";
-  }
-  userData.username = event.target.value;
+loginUsernameEl.addEventListener("blur", function(event) {
+    if (event.target.value === "") {
+        loginUsernameErrMsgEl.textContent = "Required*";
+    } else {
+        loginUsernameErrMsgEl.textContent = "";
+    }
+    userData.username = event.target.value;
 });
 
 //blur event for login password
-loginPasswordEl.addEventListener("blur", function (event) {
-  if (event.target.value === "") {
-    loginPasswordErrMsgEl.textContent = "Required*";
-  } else {
-    loginPasswordErrMsgEl.textContent = "";
-  }
-  userData.password = event.target.value;
+loginPasswordEl.addEventListener("blur", function(event) {
+    if (event.target.value === "") {
+        loginPasswordErrMsgEl.textContent = "Required*";
+    } else {
+        loginPasswordErrMsgEl.textContent = "";
+    }
+    userData.password = event.target.value;
 });
 
 //blur event for register username
-registerUsernameEl.addEventListener("blur", function (event) {
-  if (event.target.value === "") {
-    newUsernameErrMsgEl.textContent = "Required*";
-  } else {
-    newUsernameErrMsgEl.textContent = "";
-  }
-  newUserData.newUsername = event.target.value;
+registerUsernameEl.addEventListener("blur", function(event) {
+    if (event.target.value === "") {
+        newUsernameErrMsgEl.textContent = "Required*";
+    } else {
+        newUsernameErrMsgEl.textContent = "";
+    }
+    newUserData.newUsername = event.target.value;
 });
 
 //blur event for register email
-registerEmailEl.addEventListener("blur", function (event) {
-  if (event.target.value === "") {
-    newUserEmailErrMsgEl.textContent = "Required*";
-  } else {
-    newUserEmailErrMsgEl.textContent = "";
-  }
-  newUserData.newUserEmail = event.target.value;
+registerEmailEl.addEventListener("blur", function(event) {
+    if (event.target.value === "") {
+        newUserEmailErrMsgEl.textContent = "Required*";
+    } else {
+        newUserEmailErrMsgEl.textContent = "";
+    }
+    newUserData.newUserEmail = event.target.value;
 });
 
 //blur event for register password
-registerPasswordEl.addEventListener("blur", function (event) {
-  if (event.target.value === "") {
-    newPasswordErrMsgEl.textContent = "Required*";
-  } else {
-    newPasswordErrMsgEl.textContent = "";
-  }
-  newUserData.newUserPassword = event.target.value;
+registerPasswordEl.addEventListener("blur", function(event) {
+    if (event.target.value === "") {
+        newPasswordErrMsgEl.textContent = "Required*";
+    } else {
+        newPasswordErrMsgEl.textContent = "";
+    }
+    newUserData.newUserPassword = event.target.value;
 });
 
 //blur event for register confirm password
-confirmPasswordEl.addEventListener("blur", function (event) {
-  if (event.target.value === "") {
-    confirmPasswordErrMsgEl.textContent = "Required*";
-  } else {
-    confirmPasswordErrMsgEl.textContent = "";
-  }
-  newUserData.newUserConfirmPassword = event.target.value;
+confirmPasswordEl.addEventListener("blur", function(event) {
+    if (event.target.value === "") {
+        confirmPasswordErrMsgEl.textContent = "Required*";
+    } else {
+        confirmPasswordErrMsgEl.textContent = "";
+    }
+    newUserData.newUserConfirmPassword = event.target.value;
 });
 
 function validateUserData(userData) {
-  const { username, password } = userData;
-  if (username === "") {
-    loginUsernameErrMsgEl.textContent = "Required*";
-  }
-  if (password === "") {
-    loginPasswordErrMsgEl.textContent = "Required*";
-  }
+    const {
+        username,
+        password
+    } = userData;
+    if (username === "") {
+        loginUsernameErrMsgEl.textContent = "Required*";
+    }
+    if (password === "") {
+        loginPasswordErrMsgEl.textContent = "Required*";
+    }
 }
 
 function validateNewUserData(newUserData) {
-  let {
-    newUsername,
-    newUserEmail,
-    newUserPassword,
-    newUserConfirmPassword,
-  } = newUserData;
+    let {
+        newUsername,
+        newUserEmail,
+        newUserPassword,
+        newUserConfirmPassword
 
-  if (newUsername === "") {
-    newUsernameErrMsgEl.textContent = "Required*";
-  }
-  if (newUserEmail === "") {
-    newUserEmailErrMsgEl.textContent = "Required*";
-  }
-  if (newUserPassword === "") {
-    newUserPasswordEl.textContent = "Required*";
-  }
-  if (newUserConfirmPassword === "") {
-    confirmPasswordErrMsgEl.textContent = "Required*";
-  }
-  if (newUserPassword !== newUserConfirmPassword) {
-    confirmPasswordErrMsgEl.textContent = "Passwords must be same";
-  }
+    } = newUserData;
+
+    if (newUsername === "") {
+        newUsernameErrMsgEl.textContent = "Required*";
+    }
+    if (newUserEmail === "") {
+        newUserEmailErrMsgEl.textContent = "Required*";
+    }
+    if (newUserPassword === "") {
+        newPasswordErrMsgEl.textContent = "Required*";
+    }
+    if (newUserConfirmPassword === "") {
+        confirmPasswordErrMsgEl.textContent = "Required*";
+    }
+    if (newUserPassword !== newUserConfirmPassword) {
+        confirmPasswordErrMsgEl.textContent = "Passwords must be same";
+    }
 }
 
 //console.log(userData);
 //console.log(newUserData);
 
-loginFormEl.addEventListener("submit", function (event) {
-  event.preventDefault();
-  validateUserData(userData);
+loginFormEl.addEventListener("submit", function(event) {
+    event.preventDefault();
+    validateUserData(userData);
+
 });
 
-registerFormEl.addEventListener("submit", function (event) {
-  event.preventDefault();
-  validateNewUserData(newUserData);
+registerFormEl.addEventListener("submit", function(event) {
+    event.preventDefault();
+    validateNewUserData(newUserData);
 });
